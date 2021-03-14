@@ -1,6 +1,8 @@
-from sklearn import linear_model
+import matplotlib.pyplot as plt
 
+from sklearn import linear_model
 from sklearn.model_selection import train_test_split
+
 from helper import prepare_data
 
 df = prepare_data()
@@ -16,4 +18,10 @@ clf = linear_model.PoissonRegressor(max_iter=200)
 clf.fit(X_train, y_train)
 
 print(clf.score(X_test, y_test))
-print(clf.score(X_train, y_train))
+
+result = clf.predict(X)
+
+plt.plot(list(y.index), y, label="true")
+plt.plot(list(y.index), result, label="predicted")
+plt.legend()
+plt.show()

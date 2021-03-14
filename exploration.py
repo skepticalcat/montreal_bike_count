@@ -102,3 +102,6 @@ def correlations_between_lanes():
     for res in results:
         print(res)
 
+boxplots()
+weather_bike_correlation()
+correlations_between_some_lanes()

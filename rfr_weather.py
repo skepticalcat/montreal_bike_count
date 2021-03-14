@@ -10,7 +10,7 @@ y = df["Berri1"]
 
 X = df[["day", "month", "day_of_week", "Mean Temp (°C)", "Total Precip (mm)", "Snow on Grnd (cm)", "Min Temp (°C)", "Max Temp (°C)"]]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 regr = RandomForestRegressor(max_depth=10, n_estimators=200)
 regr.fit(X_train, y_train)
