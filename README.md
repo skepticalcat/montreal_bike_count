@@ -2,6 +2,10 @@
 
 Uses the Montreal bike lane count dataset [1] and a Montreal weather dataset [2].
 
+Implemented AdaBoost, RFR and Poisson Regression.
+RFR with k-fold CV.
+Achieves a mean accuracy of 0.86 with a std deviation of 0.04, similar values for r2. 
+
 Written out of personal interest
 
 ###### Weather / Bike count correlations
@@ -12,6 +16,9 @@ Written out of personal interest
 
 ![Alt text](some_lanes_corr.png "Weather/Bike Count Corr")
 
+###### RFR result
+
+![Alt text](rfr_result.png "RFR Result")
 
 #### How to run
 
